@@ -30,6 +30,7 @@ app.use(
     origin: [
       "https://criclog-admin87.web.app",
       "https://criclog057.web.app",
+      "http://localhost:3000"
     ],
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
   })
