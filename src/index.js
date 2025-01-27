@@ -58,7 +58,7 @@ app.use(battingData1Route);
 app.use(battingData2Route);
 
 app.get('/', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
+  res.status(200).json('Hello world');
 });
 
 
