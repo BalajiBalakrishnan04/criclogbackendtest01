@@ -42,7 +42,7 @@ connection();
 // API routes
 app.use("/v1", auth1Route);
 app.use("/admin", adminauthRoute);
-app.use("/view", express.static("upload"));
+app.use("/view", express.static("/upload"));
 app.use(marketRoute);
 app.use(newsRoute);
 app.use(internationalRoute);
