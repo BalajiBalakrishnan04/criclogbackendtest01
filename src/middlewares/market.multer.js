@@ -1,7 +1,7 @@
 const multer = require ("multer");
 
 const storage = multer.diskStorage({
-    destination:"src/upload",
+    destination:"upload",
     filename:( req,file,cd )=>{
         cd(null,`${Date.now()}-${file.originalname}`)
     }
