@@ -1,8 +1,9 @@
 const multer = require ("multer");
+const path = require("path");
 
 const storage = multer.diskStorage({
     destination: function (req, file, cd) {
-        cd(null, '/upload');  // Change this to '/tmp' for writable access
+        cd(null, path.join("/upload"))// Change this to '/tmp' for writable access
       },
     filename:( req,file,cd )=>{
         cd(null,`${Date.now()}-${file.originalname}`)

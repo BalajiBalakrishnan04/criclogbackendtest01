@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const connection = require("./config/connection");
+const path = require("path");
 
 // Route imports
 const auth1Route = require("./routes/auth1.routes");
@@ -42,7 +43,7 @@ connection();
 // API routes
 app.use("/v1", auth1Route);
 app.use("/admin", adminauthRoute);
-app.use("/view", express.static("/upload"));
+app.use("/view", express.static(path.join("/upload")));
 app.use(marketRoute);
 app.use(newsRoute);
 app.use(internationalRoute);
